@@ -1,77 +1,68 @@
 <div class="container-fluid">
-    <div class="row">
-
+    <div class="row align-items-center bg-gradient-primary" id="">
         <div class="col-md-6" id="img-bg"></div>
-
-        <div class="col-md-6 my-5">
-
+        <div class="col-md-6 my-5 ">
             <div class="row d-flex justify-content-center">
-
                 <div class="col-md-8">
 
                     <h1 class="text-center">Cadastro</h1>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input type="text" name="nome" required="required">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome"
-                            placeholder="Digite seu nome...">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input type="text" name="usuario" required="required">
                         <label for="usuario">Usuário</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario"
-                            placeholder="Digite seu e-mail...">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input type="password" name="senha" required="required">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" name="senha" id="senha"
-                            placeholder="Digite sua senha...">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input type="password" name="ConfirmaSenha" required="required">
                         <label for="ConfirmaSenha">Confirmar Senha</label>
-                        <input type="password" class="form-control" name="ConfirmaSenha" id="ConfirmaSenha"
-                            placeholder="Confirme sua senha...">
                     </div>
-                    
-                    <div class="form-group">
+
+                    <div class="input-style-l mb-4">
+                        <input type="text" name="foto" required="required">
                         <label for="usuario">Link da Foto</label>
-                        <input type="text" class="form-control" name="foto" id="foto"
-                            placeholder="Insira o link da sua foto...">
+                    </div>
+
+                    <div class="mb-3">
+                        <input id="user" type="radio" name="webmaster" value="user" checked/> Usuário
+                        <input id="user" type="radio" name="webmaster" value="adm" /> Administrador
+                    </div>
+
+                    <div class="input-style-l mb-4">
+                        <input type="text" name="foto" required="required">
+                        <label for="usuario">Tipo de usuário</label>
                     </div>
 
                     <div class="form-group">
                         <label for="TipoUsuario">Tipo de usuário</label>
                         <select class="form-control" name="tipo" id="tipo" placeholder="sasa">
-                            <option disabled selected>Selecione um tipo de usuário:</option>
+                            <option disabled selected>Selecione o tipo de usuário:</option>
                             <option value="normal">Usuário</option>
                             <option value="adm">Administrador</option>
                         </select>
                     </div>
 
                     <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-danger mr-4">Cancelar</button>
+                        <button type="submit" class="btn btn-danger mr-4" routerLink="/login">Cancelar</button>
                         <button type="submit" class="btn btn-dark">Cadastrar</button>
                     </div>
 
                     <hr class="my-4">
 
                     <p class="text-center">
-                        Já tem uma conta? <a href="">Logar</a>
+                        Já tem uma conta? <a href="" routerLink="/login">Logar</a>
                     </p>
                 </div>
-
-
-
             </div>
-
-
         </div>
-
     </div>
-
-
-
-
 </div>
