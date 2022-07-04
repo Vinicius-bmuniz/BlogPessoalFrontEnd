@@ -1,77 +1,75 @@
-<div class="container-fluid">
-    <div class="row">
-
+<div class="container-fluid background-page">
+    <div class="row align-items-center bg-gradient-primary" id="">
         <div class="col-md-6" id="img-bg"></div>
-
-        <div class="col-md-6 my-5">
-
+        <div class="col-md-6 my-5 ">
             <div class="row d-flex justify-content-center">
-
-                <div class="col-md-8">
+                <div class="col-md-8 form-shadow">
 
                     <h1 class="text-center">Cadastro</h1>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input [(ngModel)]="usuario.nome" type="text" name="nome" required="required">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome"
-                            placeholder="Digite seu nome...">
+                        <!-- [(ngModel)]="usuario.nome" | Com essa palavra reservada acessamos diretamente o atributo atraves nosso model usuario -->
+                        <!-- o [(ngModel)]="" | é Implementado pelo FormsModule em app.module.ts, ele tem a função de capturar a informação do input-->
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input [(ngModel)]="usuario.usuario" type="text" name="usuario" required="required">
                         <label for="usuario">Usuário</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario"
-                            placeholder="Digite seu e-mail...">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input (input)="confirmarSenha($event)" type="password" name="senha" required="required" id="password">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" name="senha" id="senha"
-                            placeholder="Digite sua senha...">
+                        <!-- (input)="confirmarSenha($event) | É para linkarmos o evento no nosso .ts ao nosso input | Usamos $ para referenciar que é um evento -->
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-style-l mb-4">
+                        <input [(ngModel)]="usuario.senha" type="password" name="ConfirmaSenha" required="required">
                         <label for="ConfirmaSenha">Confirmar Senha</label>
-                        <input type="password" class="form-control" name="ConfirmaSenha" id="ConfirmaSenha"
-                            placeholder="Confirme sua senha...">
+                        <!-- [(ngModel)]="usuario.senha" | Com essa palavra reservada acessamos diretamente o atributo senha atraves nosso model usuario -->
                     </div>
-                    
-                    <div class="form-group">
+
+                    <div class="input-style-l mb-4">
+                        <input [(ngModel)]="usuario.foto" type="text" name="foto" required="required">
                         <label for="usuario">Link da Foto</label>
-                        <input type="text" class="form-control" name="foto" id="foto"
-                            placeholder="Insira o link da sua foto...">
                     </div>
+
+                    <!-- <div class="mb-3">
+                        <input id="user" type="radio" name="webmaster" value="user"/> Usuário
+                        <input id="user" type="radio" name="webmaster" value="adm"/> Administrador
+                    </div>
+
+                    <div class="input-style-l mb-4">
+                        <input type="text" name="foto" required="required">
+                        <label for="usuario">Tipo de usuário</label>
+                    </div>  -->
+
+
 
                     <div class="form-group">
                         <label for="TipoUsuario">Tipo de usuário</label>
-                        <select class="form-control" name="tipo" id="tipo" placeholder="sasa">
-                            <option disabled selected>Selecione um tipo de usuário:</option>
-                            <option value="normal">Usuário</option>
+                        <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
+                            <option disabled selected>Selecione o tipo de usuário:</option>
+                            <option value="user">Usuário</option>
                             <option value="adm">Administrador</option>
                         </select>
                     </div>
 
                     <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-danger mr-4">Cancelar</button>
-                        <button type="submit" class="btn btn-dark">Cadastrar</button>
+                        <button type="submit" class="btn btn-danger mr-4" routerLink="/login">Cancelar</button>
+                        <button type="submit" class="btn btn-dark" (click)="cadastrar()">Cadastrar</button>
+                        <!-- (click)="cadastrar()" | Com essa ação, executamos o método cadastrar() ao clicar no botão -->
                     </div>
 
                     <hr class="my-4">
 
                     <p class="text-center">
-                        Já tem uma conta? <a href="">Logar</a>
+                        Já tem uma conta? <a routerLink="/login">Logar</a>
                     </p>
                 </div>
-
-
-
             </div>
-
-
         </div>
-
     </div>
-
-
-
-
 </div>
