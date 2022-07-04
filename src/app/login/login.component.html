@@ -1,41 +1,52 @@
-<div class="container-fluid">
+<div class="container-fluid background-page">
+
     <div class="row d-flex align-items-center">
 
-        <div class="col-md-6">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-11 img-bg">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-2 texture"></div>
+
+        <div class="col-md-4">
             
             <div class="row d-flex justify-content-center">
-
-                
-                <div class="col-md-6" id="media-size">
+                <div class="col-md-11 form-shadow" id="media-size">
 
                     <h1 class="text-center mb-3">Entrar</h1>
 
                     <div class="input-style mb-4">
-                        <input type="text" name="usuario" required="required">
+                        <input [(ngModel)]="usuarioLogin.usuario" type="text" name="usuario" required="required">
                         <span>Usuário</span>
                     </div>
 
                     <div class="input-style mb-4">
-                        <input type="password" name="senha" required="required">
+                        <input [(ngModel)]="usuarioLogin.senha" type="password" name="senha" required="required">
                         <span>Senha</span>
                     </div>
 
                     <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-dark">Entrar</button>
+                        <button (click)="logar()" type="submit" class="btn btn-dark">Entrar</button>
                     </div>
 
                     <hr class="my-4">
 
                     <p class="text-center">
-                        Não tem uma conta? <a href="" routerLink="/register">Cadastre-se</a>
+                        Não tem uma conta? <a routerLink="/register">Cadastre-se</a>
                     </p>
-
                 </div>
             </div>
+
         </div>
 
-        <div class="col-md-6" id="img-bg">
-        </div>
+        <div class="col-md-1 texture"></div>
 
     </div>
 </div>
