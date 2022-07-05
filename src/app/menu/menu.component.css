@@ -21,3 +21,12 @@
     letter-spacing: 1px;
 }
 
+.fs-16-lspacing-1-italic{
+    font-size: 16pt;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.pointer{
+    cursor: pointer;
+}

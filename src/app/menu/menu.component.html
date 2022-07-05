@@ -12,11 +12,11 @@
     <ul class="navbar-nav mr-auto d-flex align-items-center">
 
       <li class="nav-item active">
-        <img class="img-fluid rounded-circle" src="https://i.imgur.com/BKJ8d4R.png" alt="" width="50px" height="50px">
+        <img class="img-fluid rounded-circle" src="{{foto}}" alt="" width="50px" height="50px">
       </li>
 
       <li class="nav-item pl-3">
-        <p class="m-0 font-weight-bold text-white fs-16-lspacing-1">Vinicius Barbosa</p>
+        <p class="m-0 font-weight-bold text-white fs-16-lspacing-1">Olá, {{nome}}</p>
       </li>
 
       <li class="nav-item pl-3">
@@ -31,8 +31,8 @@
     <ul class="navbar-nav ml-auto d-flex align-items-center">
 
       <li class="nav-item pl-1">
-        <a class="m-0 font-weight-bold text-white fs-14-lspacing-1">Sair
-          <i class="bi bi-box-arrow-left"></i>
+        <a (click)="sair()" class="m-0 font-weight-bold text-white fs-16-lspacing-1-italic pointer">Sair
+          <i class="bi bi-box-arrow-right"></i>
         </a>
       </li>
 
