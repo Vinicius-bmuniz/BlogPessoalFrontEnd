@@ -20,7 +20,8 @@
                     </div>
 
                     <div class="input-style-l mb-4">
-                        <input (input)="confirmarSenha($event)" type="password" name="senha" required="required" id="password">
+                        <input (input)="confirmarSenha($event)" type="password" name="senha" required="required"
+                            id="password">
                         <label for="senha">Senha</label>
                         <!-- (input)="confirmarSenha($event) | É para linkarmos o evento no nosso .ts ao nosso input | Usamos $ para referenciar que é um evento -->
                     </div>
@@ -46,8 +47,6 @@
                         <label for="usuario">Tipo de usuário</label>
                     </div>  -->
 
-
-
                     <div class="form-group">
                         <label for="TipoUsuario">Tipo de usuário</label>
                         <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
@@ -56,6 +55,10 @@
                             <option value="adm">Administrador</option>
                         </select>
                     </div>
+
+
+        
+            
 
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-danger mr-4" routerLink="/login">Cancelar</button>
