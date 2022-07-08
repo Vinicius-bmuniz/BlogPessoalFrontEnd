@@ -37,15 +37,17 @@
                         <label for="usuario">Link da Foto</label>
                     </div>
 
-                    <!-- <div class="mb-3">
-                        <input id="user" type="radio" name="webmaster" value="user"/> Usuário
-                        <input id="user" type="radio" name="webmaster" value="adm"/> Administrador
+                    <div class="form-check form-check-inline mb-2 radio-style">
+                        <input class="ml-1" type="radio" name="webmaster" value="user" (change)="tipoUser($event)" />Usuário
+                        <input class="ml-3" type="radio" name="webmaster" value="adm" (change)="tipoUser($event)" />Administrador
                     </div>
 
-                    <div class="input-style-l mb-4">
+
+
+                    <!-- <div class="input-style-l mb-4">
                         <input type="text" name="foto" required="required">
                         <label for="usuario">Tipo de usuário</label>
-                    </div>  -->
+                    </div>
 
                     <div class="form-group">
                         <label for="TipoUsuario">Tipo de usuário</label>
@@ -54,11 +56,7 @@
                             <option value="user">Usuário</option>
                             <option value="adm">Administrador</option>
                         </select>
-                    </div>
-
-
-        
-            
+                    </div> -->
 
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-danger mr-4" routerLink="/login">Cancelar</button>

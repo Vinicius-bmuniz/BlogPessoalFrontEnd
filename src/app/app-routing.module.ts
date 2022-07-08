@@ -1,16 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DeleteThemesComponent } from './delete/delete-themes/delete-themes.component';
+import { EditThemesComponent } from './edit/edit-themes/edit-themes.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ThemeComponent } from './theme/theme.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, //Esse serve para redirecionar caso o componente acessado não seja encontrado.
+  //Esse serve para redirecionar caso o componente acessado não seja encontrado.
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, 
+
+  //ROTAS CADASTRO E LOGAR
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+
+  //ROTAS PÁGINA HOME
   { path: 'home', component: HomeComponent },
-  { path: 'themes', component: ThemeComponent }
+
+  // ROTAS DE TEMAS
+  { path: 'themes', component: ThemeComponent },
+  { path: 'del-themes/:id', component: DeleteThemesComponent },
+  { path: 'edit-themes/:id', component: EditThemesComponent }
+  //quado colocamos :id estamos falando que esse id vai ser uma variável
+
 ];
 
 @NgModule({

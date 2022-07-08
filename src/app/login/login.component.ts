@@ -31,13 +31,16 @@ export class LoginComponent implements OnInit {
       environment.nome = this.usuarioLogin.nome
       environment.id = this.usuarioLogin.id
       environment.foto = this.usuarioLogin.foto
+      environment.tipo = this.usuarioLogin.tipo
 
       console.log(environment.token)
       console.log(environment.nome)
       console.log(environment.id)
       console.log(environment.foto)
+      console.log(environment.tipo)
 
       this.router.navigate(['/home'])
+
     }, erro => {
       if(erro.status == 401) {
       alert('Usuário ou senha incorretos!')

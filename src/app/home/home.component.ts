@@ -10,11 +10,12 @@ import { environment } from 'src/environments/environment.prod';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private router :Router
+    private router: Router,
+
   ) { }
 
-  ngOnInit(){
-    if (environment.token == ''){
+  ngOnInit() {
+    if (environment.token == '') {
       // alert('Sua sessão expirou!')
       this.router.navigate(['/login'])
     }
