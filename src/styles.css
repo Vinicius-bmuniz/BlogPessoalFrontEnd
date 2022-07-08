@@ -1,3 +1,18 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* TAMANHOS DE FONTE */
+.fs-54{
+    font-size: 54pt;
+}
+.fs-18{
+    font-size: 18pt;
+}
+
+
+
 /* COR DO BACKGROUND */
 .background-page {
     background-color: rgb(221, 221, 129);
@@ -96,3 +111,4 @@
 .input-style input:valid{
     border:1px solid #17a2b8;
 }
+

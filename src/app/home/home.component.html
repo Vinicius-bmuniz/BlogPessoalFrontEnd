@@ -1,1 +1,97 @@
-<p>home works!</p>
+<div class="container-fluid">
+    <div class="row bg-secondary text-white d-flex align-items-center">
+
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="fs-54">Seja bem vindo(a)!</h1>
+                    <h5 class="fs-18">Expresse aqui seus pensamentos!</h5>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+                <div class="col-md-6">
+                    <button class="btn btn-light mr-2" data-toggle="modal" data-target="#NewPost">Nova Postagem</button>
+                    <a class="btn btn-outline-light" href="#pagePosts">Ver Postagens</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center">
+            <img class="img-fluid h-100" src="https://i.imgur.com/Evp5t3t.png" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+<nav class="container my-5" id="pagePosts">
+
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+            <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-AllPosts-tab" data-toggle="tab"
+                href="#AllPosts" role="tab" aria-controls="nav-AllPosts" aria-selected="true">Todas as Postagens
+            </a>
+
+            <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-MyPosts-tab" data-toggle="tab"
+                href="#MyPosts" role="tab" aria-controls="nav-MyPosts" aria-selected="false">Minhas Postagens
+            </a>
+
+            <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-PostsByTema-tab" data-toggle="tab"
+                href="#PostsByTema" role="tab" aria-controls="nav-PostsByTema" aria-selected="false"> Postagens por Tema
+            </a>
+
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+
+        <div class="tab-pane fade show active" id="AllPosts" role="tabpanel" aria-labelledby="nav-AllPosts-tab">Todas as
+            postagens</div>
+
+        <div class="tab-pane fade" id="MyPosts" role="tabpanel" aria-labelledby="nav-MyPosts-tab">Minhas postagens</div>
+
+        <div class="tab-pane fade" id="PostsByTema" role="tabpanel" aria-labelledby="nav-PostsByTema-tab">Postagens por
+            tema</div>
+
+    </div>
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="NewPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input class="form-control" type="text" name="titulo" required="required">
+                </div>
+
+                <div class="form-group">
+                    <label for="texto">Texto</label>
+                    <textarea class="form-control" name="texto" id="texto-form" rows="10" placeholder="Insira seu texto"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="texto">Escolha um Tema ou <a data-dismiss="modal" routerLink="/themes">Cadastre um novo</a>:</label>
+                    <select class="form-control" name="tema" id="temas">
+                        <option value="tema 1">Tema 1</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success">Publicar</button>
+            </div>
+        </div>
+    </div>
+</div>
