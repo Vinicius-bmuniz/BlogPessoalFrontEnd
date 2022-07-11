@@ -24,8 +24,20 @@ export class PostagemService {
     return this.http.get<Postagem[]>(this.linkPostagens, this.token)
   }
 
+  getPostById(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(this.linkPostagens + `/${id}`, this.token)
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>(this.linkPostagens, postagem, this.token)
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.put<Postagem>(this.linkPostagens, postagem, this.token)
+  }
+
+  deletePost(id: number){
+    return this.http.delete(this.linkPostagens + `/${id}`, this.token)
   }
 
 }

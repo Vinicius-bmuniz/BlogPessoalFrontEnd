@@ -75,9 +75,6 @@ export class HomeComponent implements OnInit {
     this.user.id = this.idUser
     this.postagem.usuario = this.user //Com isso eu pego o usuário acima que foi achado pelo ID
 
-    console.log(this.postagem.titulo)
-    console.log(this.postagem.texto)
-
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem criada com sucesso!!')

@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 mt-4">
+            <h1 class="text-center text-secondary">Atualizar Postagem</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input [(ngModel)]='postagem.titulo' class="form-control" type="text" id="titulo"
+                    placeholder="Digite o Título...">
+            </div>
+
+            <div class="form-group">
+                <label for="texto">Texto</label>
+                <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="7"
+                    placeholder="Insira seu texto"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="texto">Escolha um Tema ou <a data-dismiss="modal" routerLink="/themes">Cadastre um
+                        novo</a>:</label>
+                <select class="form-control" name="tema" id="temas" [(ngModel)]="idTema" (change)="findByIdTema()">
+                    <option *ngFor="let tema of listaTemas" value="{{tema.id}}">{{tema.descricao}}</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-center mb-3">
+                <button class="btn btn-danger mr-3" routerLink="/home">Cancelar</button>
+                <button class="btn btn-success" (click)="putPost()">Atualizar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

@@ -34,7 +34,8 @@
             </a>
 
             <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-MyPosts-tab" data-toggle="tab"
-                href="#MyPosts" role="tab" aria-controls="nav-MyPosts" aria-selected="false" (click)="getByUserId()">Minhas Postagens
+                href="#MyPosts" role="tab" aria-controls="nav-MyPosts" aria-selected="false"
+                (click)="getByUserId()">Minhas Postagens
             </a>
 
             <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-PostsByTema-tab" data-toggle="tab"
@@ -74,6 +75,10 @@
                         <p class="card-text"><small class="text-muted">
                                 {{post.data | date: 'dd/MM/yyyy'}} às {{post.data | date: 'HH:mm'}}
                             </small></p>
+
+                        <a class="text-info mr-4" [routerLink]="['/post-edit', post.id]" href="">Editar</a>
+                        <a class="text-danger" [routerLink]="['/post-delete', post.id]" href="">Apagar</a>
+
                     </div>
                 </div>
             </div>
@@ -89,10 +94,12 @@
                         <p class="card-text"><small class="text-muted">
                                 {{post.data | date: 'dd/MM/yyyy'}} às {{post.data | date: 'HH:mm'}}
                             </small></p>
+
+
                     </div>
                 </div>
             </div>
-        
+
         </div>
 
     </div>
