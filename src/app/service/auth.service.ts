@@ -10,6 +10,8 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
 })
 export class AuthService {
 
+  linkUsuario = "http://localhost:8080/usuarios"
+
   constructor(private http: HttpClient) {
   }
 
@@ -33,4 +35,7 @@ export class AuthService {
     return ok
   }
 
+  getUserById (id :number): Observable<Usuario>{
+    return this.http.get<Usuario>(this.linkUsuario + `/${id}`)
+  }
 }
