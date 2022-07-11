@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { ThemeComponent } from './theme/theme.component';
 import { EditThemesComponent } from './edit/edit-themes/edit-themes.component';
 import { DeleteThemesComponent } from './delete/delete-themes/delete-themes.component';
+import { PostEditComponent } from './edit/post-edit/post-edit.component';
+import { PostDeleteComponent } from './delete/post-delete/post-delete.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { DeleteThemesComponent } from './delete/delete-themes/delete-themes.comp
     ThemeComponent,
     EditThemesComponent,
     DeleteThemesComponent,
+    PostEditComponent,
+    PostDeleteComponent,
   ],
   imports: [
     BrowserModule,
