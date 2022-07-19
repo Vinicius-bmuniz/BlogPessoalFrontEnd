@@ -11,7 +11,7 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
 export class AuthService {
 
   // linkUsuario = "http://localhost:8080/usuarios"
-  linkUsuario = "https://munizblogpessoal.herokuapp.com/usuarios"
+  linkUsuario = "http://munizblogpessoal.herokuapp.com/usuarios"
 
   constructor(private http: HttpClient) {
   }

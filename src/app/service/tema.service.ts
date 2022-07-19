@@ -10,7 +10,7 @@ import { Tema } from '../model/Tema';
 export class TemaService {
 
   // linkTema = 'http://localhost:8080/temas'
-  linkTema = "https://munizblogpessoal.herokuapp.com/temas"
+  linkTema = "http://munizblogpessoal.herokuapp.com/temas"
 
 
   constructor(

@@ -10,7 +10,7 @@ import { Postagem } from '../model/Postagem';
 export class PostagemService {
 
   // linkPostagens = 'http://localhost:8080/postagens'
-  linkPostagens = "https://munizblogpessoal.herokuapp.com/postagens"
+  linkPostagens = "http://munizblogpessoal.herokuapp.com/postagens"
 
   constructor(
     private http: HttpClient
