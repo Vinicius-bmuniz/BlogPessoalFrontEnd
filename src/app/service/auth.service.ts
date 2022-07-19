@@ -19,13 +19,13 @@ export class AuthService {
   register(usuario: Usuario): Observable<Usuario> {
     //Colocando os parâmetros como a classe Usuario, temos acesso aos atributos da classe Usuario.ts que criamos na model do front
     //Com o Observable<Usuario> estamos definindo que só será aceito a model Usuario
-    return this.http.post<Usuario>(this.linkUsuario, usuario)
+    return this.http.post<Usuario>(this.linkUsuario + "/cadastrar", usuario)
     //O retorno do nosso método é um http.post<Usuario> (endPoint, objeto(que quero enviar))
   }
 
 
   login(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
-    return this.http.post<UsuarioLogin>(this.linkUsuario, usuarioLogin)
+    return this.http.post<UsuarioLogin>(this.linkUsuario + "/logar", usuarioLogin)
   }
 
   logado() {
