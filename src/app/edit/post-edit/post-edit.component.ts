@@ -34,7 +34,9 @@ export class PostEditComponent implements OnInit {
       // alert('Sua sessão expirou!')
       this.router.navigate(['/login'])
     }
+
     let id = this.route.snapshot.params['id']
+    
     this.findPostById(id)
 
     this.getAllTemas()
