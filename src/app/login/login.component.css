@@ -9,7 +9,15 @@
 
 }
 
-.texture{
+.background{
+    background-color: rgb(236, 230, 223);
+}
+.container-new{
+    display: flex;
+    height: 100vh;
+}
+
+.texture {
     background-image: url('https://i.imgur.com/UZTMHpX.png%27');
     min-height: 100vh;
     background-position: center;
@@ -17,15 +25,12 @@
     background-size: cover;
 }
 
+.box-shadow {
+    box-shadow: 14px 14px 20px #b1b3b6, -14px -14px 20px rgb(236, 230, 223);
+}
 
 
-
-
-
-
-
-
-
+/* MEDIA QUERRY */
 @media (max-width: 767px) {
     .container-fluid {
         background-color: aquamarine;
